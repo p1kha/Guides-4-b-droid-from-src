@@ -1,0 +1,14 @@
+1)Installing Repo:
+user@host ~ $ mkdir ~/bin
+user@host ~ $ PATH=~/bin:$PATH
+user@host ~ $ curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
+user@host ~ $ chmod a+x ~/bin/repo
+2)Initializing a Repo client:
+user@host ~ $ mkdir working_dir
+user@host ~ $ cd working_dir
+user@host ~ $ git config —global user.name "Your Name"
+user@host ~ $ git config —global user.email "you@example.com"
+user@host ~ $ repo init -u https://android.googlesource.com/platform/manifest
+user@host ~ $ repo init -u https://android.googlesource.com/platform/manifest -b android-X.X.X_rX
+3)Downloading the AOSP source tree:
+user@host ~ $ repo sync -f
