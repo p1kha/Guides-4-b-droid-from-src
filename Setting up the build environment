@@ -1,0 +1,32 @@
+1)Installing JDK 1.6(6u45):
+user@host ~ $ sudo apt-get update
+user@host ~ $ chmod +x jdk-6u45-linux-x64.bin
+user@host ~ $ sh jdk-6u45-linux-x64.bin
+user@host ~ $ sudo update-alternatives —install /usr/bin/java java ~/jdk/bin/java 1
+user@host ~ $ sudo update-alternatives —install /usr/bin/javac javac ~/jdk/bin/javac 1
+user@host ~ $ sudo update-alternatives —install /usr/bin/javaws javaws ~/jdk/bin/javaws 1
+user@host ~ $ sudo update-alternatives —config java
+user@host ~ $ sudo update-alternatives —config javac
+user@host ~ $ sudo update-alternatives —config javaws
+user@host ~ $ cd ~
+user@host ~ $ touch .bashrc
+user@host ~ $ echo 'PATH=$PATH:~/jdk/bin' > .bashrc
+user@host ~ $ echo 'PATH=$PATH:~/jdk/jre/bin' » .bashrc
+2)Etc:
+user@host ~ $ sudo apt-get install -y git-core gnupg flex bison gperf libsdl1.2-dev libesd0-dev libwxgtk3.0-dev squashfs-tools build-essential zip curl libncurses5-dev zlib1g-dev pngcrush schedtool g++-multilib lib32z1-dev lib32ncurses5-dev lib32readline6-dev libxml2-utils u-boot-tools libc6-dev x11proto-core-dev libx11-dev:i386 libreadline6-dev:i386 libgl1-mesa-glx:i386 libgl1-mesa-dev mingw32 tofrodos python-markdown xsltproc
+user@host ~ $ wget http://archive.ubuntu.com/ubuntu/pool/universe/m/ming..
+user@host ~ $ wget http://archive.ubuntu.com/ubuntu/pool/universe/m/ming..
+user@host ~ $ wget http://archive.ubuntu.com/ubuntu/pool/universe/m/ming..
+user@host ~ $ sudo dpkg -i *.deb
+user@host ~ $ sudo apt-get install -f
+user@host ~ $ sudo dpkg -i *.deb
+3)Setting up android SDK cmd tools:
+user@host ~ $ cd ~/sdk/tools
+user@host ~ $ sudo ./android update sdk
+user@host ~ $ sudo apt-get install adb && sudo apt-get install android-tools-adb
+user@host ~ $ cd ~/sdk/tools && sudo ./android update adb
+user@host ~ $ adb kill-server
+user@host ~ $ adb start-server
+user@host ~ $ sudo add-apt-repository ppa:nilarimogard/webupd8 
+user@host ~ $ sudo apt-get update && sudo apt-get install android-tools-fastboot
+user@host ~ $ cd ~/sdk/platform-tools/ &&sudo cp adb /usr/bin/adb && sudo cp fastboot /usr/bin/fastboot && sudo chmod 755 /usr/bin/adb && sudo chmod 755 /usr/bin/fastboot
