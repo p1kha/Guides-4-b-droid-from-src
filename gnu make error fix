@@ -1,0 +1,6 @@
+Download 3.82 from http://ftp.gnu.org/gnu/make/
+extract it and cd into the path and run:
+./configure
+./build.sh
+sudo mv make `which make`
+make -version
